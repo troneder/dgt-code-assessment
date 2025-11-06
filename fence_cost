@@ -1,0 +1,28 @@
+# Tyrone Chen
+
+# Date: 5/11/2025 
+
+on = True
+while(on):
+    try:
+        width = float(input("Please tell me the width of the fence that is bigger than 0:  "))
+        length = float(input("Please tell me the length of the fence that is bigger than 0: "))
+        cost = float(input("Please give me the cost per meter that is bigger than 0: "))
+    
+        if(width or length or cost > 0):
+            perimeter = 2*(width+length)
+
+            print("Area is",(str(width*length))+"m")
+            print("Perimeter is",str(perimeter)+"m")
+            print("Cost will be:","$"+str((perimeter*cost)))
+
+            switch = input("Go again? (enter to restart): ")
+            if(switch == ""):
+                on = True
+            else:
+                on = False
+        else:
+            print("Please enter a number bigger than 0!")
+
+    except ValueError:
+        print("This is not a valid number!")
