@@ -17,7 +17,5 @@ while(on):
         else:
             on = False
         
-    except:
-        if(width or length == 0):
-            print("Please enter a number bigger than 0!") 
+    except ValueError:
         print("This is not a valid number!")
