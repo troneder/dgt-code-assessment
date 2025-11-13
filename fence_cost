@@ -5,24 +5,24 @@
 on = True
 while(on):
     try:
-        width = float(input("Please tell me the width of the fence that is bigger than 0:  "))
-        length = float(input("Please tell me the length of the fence that is bigger than 0: "))
-        cost = float(input("Please give me the cost per meter that is bigger than 0: "))
+        width = float(input("Please tell me the width of the fence that is bigger than 0:  ")) #Asks user for the width
+        length = float(input("Please tell me the length of the fence that is bigger than 0: ")) #Asks user for the length
+        cost = float(input("Please give me the cost per meter that is bigger than 0: ")) #Asks user for the cost
     
-        if(width or length or cost > 0):
-            perimeter = 2*(width+length)
+        if(width and length and cost > 0): #Checks if the width and length and cost is bigger than 0
+            perimeter = 2*(width+length) #Calculates perimeter
 
-            print("Area is",(str(width*length))+"m")
-            print("Perimeter is",str(perimeter)+"m")
-            print("Cost will be:","$"+str((perimeter*cost)))
+            print("Area is",(str(width*length))+"m") #Prints area
+            print("Perimeter is",str(perimeter)+"m") #Prints perimeter
+            print("Cost will be:","$"+str((perimeter*cost))) #Prints cost
 
-            switch = input("Go again? (enter to restart): ")
-            if(switch == ""):
-                on = True
+            switch = input("Go again? (enter to restart): ") #Asks user if they want to run the code again
+            if(switch == ""): #Checks the response
+                on = True #Runs the code again
             else:
-                on = False
+                on = False #Stops the code
         else:
-            print("Please enter a number bigger than 0!")
+            print("Please enter a number bigger than 0!") #The user has submited a number equal or less than 0
 
     except ValueError:
-        print("This is not a valid number!")
+        print("This is not a valid number!")#The user has not submitted a valid number to calculate
